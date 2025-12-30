@@ -1,0 +1,9 @@
+import React from 'react';
+
+export default function Gallery() {
+  return (
+    <>
+<section id="gallery" className="section"><div className="container"><div className="section-header"><h2 className="section-title"><span className="lang-zh">精选案例</span><span className="lang-en">Works Gallery</span></h2></div><div className="gallery-nav"><button className="gallery-btn active">All</button><button className="gallery-btn ">Branding</button><button className="gallery-btn ">Signs</button><button className="gallery-btn ">Packaging</button></div><div className="gallery-grid"><div className="gallery-card" data-cat="branding"><img alt="Cards" loading="lazy" width="600" height="400" decoding="async" data-nimg="1" style={{color: 'transparent'}} src="restore/Cafe-Branding.jpg" /><div className="gallery-info"><h4>Cafe Branding</h4><p>Menu & Business Cards</p></div></div><div className="gallery-card" data-cat="packaging"><img alt="Box" loading="lazy" width="600" height="400" decoding="async" data-nimg="1" style={{color: 'transparent'}} src="restore/Luxury-Gift-Box.jpg" /><div className="gallery-info"><h4>Luxury Gift Box</h4><p>Custom Size with Gold Foil</p></div></div><div className="gallery-card" data-cat="signs"><img alt="Sign" loading="lazy" width="600" height="400" decoding="async" data-nimg="1" style={{color: 'transparent'}} src="restore/Store-Signage.jpg" /><div className="gallery-info"><h4>Store Signage</h4><p>3D Channel Letters</p></div></div><div className="gallery-card" data-cat="signs"><img alt="Banner" loading="lazy" width="600" height="400" decoding="async" data-nimg="1" style={{color: 'transparent'}} src="restore/Event-Backdrop-Large-Format-Printing.jpg" /><div className="gallery-info"><h4>Event Backdrop</h4><p>Large Format Printing</p></div></div></div></div></section>
+    </>
+  );
+}
