@@ -2,72 +2,53 @@
 import React from 'react';
 import { CometCard } from './ui/comet-card';
 
-export default function QuickLinks() {
-  const cards = [
-    {
-      icon: 'fa-solid fa-print',
-      title: 'General Printing',
-      titleZh: '一般印刷',
-      desc: '数码 & 平版印刷',
-      hoverColor: '#e9590c'
-    },
-    {
-      icon: 'fa-solid fa-bullhorn',
-      title: 'Marketing',
-      titleZh: '商务宣传',
-      desc: '名片、传单、画册',
-      hoverColor: '#e42513'
-    },
-    {
-      icon: 'fa-solid fa-sign-hanging',
-      title: 'Signs & Displays',
-      titleZh: '展示与标示',
-      desc: '易拉宝、横幅、招牌',
-      hoverColor: '#d21f82'
-    },
-    {
-      icon: 'fa-solid fa-box-open',
-      title: 'Packaging',
-      titleZh: '品牌包装',
-      desc: '包装盒、贴纸、标签',
-      hoverColor: '#713389'
-    },
-    {
-      icon: 'fa-solid fa-pen-ruler',
-      title: 'Stationery',
-      titleZh: '商务文具',
-      desc: '信纸、信封、联单',
-      hoverColor: '#2569b1'
-    },
-    {
-      icon: 'fa-solid fa-wand-magic-sparkles',
-      title: 'Finishing',
-      titleZh: '后加工',
-      desc: '烫金、覆膜、模切',
-      hoverColor: '#1ca538'
-    }
+interface QuickLinksProps {
+  dict: any;
+  lang: string;
+}
+
+export default function QuickLinks({ dict, lang }: QuickLinksProps) {
+  // Mapping icons and colors which are constant
+  const meta = [
+    { icon: 'fa-solid fa-print', hoverColor: '#e9590c' },
+    { icon: 'fa-solid fa-bullhorn', hoverColor: '#e42513' },
+    { icon: 'fa-solid fa-sign-hanging', hoverColor: '#d21f82' },
+    { icon: 'fa-solid fa-box-open', hoverColor: '#713389' },
+    { icon: 'fa-solid fa-pen-ruler', hoverColor: '#2569b1' },
+    { icon: 'fa-solid fa-wand-magic-sparkles', hoverColor: '#1ca538' }
   ];
+
+  const items = dict.quick_links || [];
 
   return (
     <>
       <div className="container quick-links">
         <div className="ql-grid">
-          {cards.map((card, index) => (
-            <CometCard key={index} rotateDepth={12} translateDepth={10}>
-              <div
-                className="ql-card"
-                style={{ '--hover-color': card.hoverColor } as React.CSSProperties}
-              >
-                <div className="ql-icon">
-                  <i className={card.icon}></i>
+          {items.map((item: any, index: number) => {
+            const m = meta[index] || meta[0];
+            return (
+              <CometCard key={index} rotateDepth={12} translateDepth={10} className="h-full">
+                <div
+                  className="ql-card"
+                  style={{
+                    '--hover-color': m.hoverColor,
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-start'
+                  } as React.CSSProperties}
+                >
+                  <div className="ql-icon">
+                    <i className={m.icon}></i>
+                  </div>
+                  <h3 className="ql-title">
+                    {item.title}
+                  </h3>
+                  <p className="ql-desc">{item.desc}</p>
                 </div>
-                <h3 className="ql-title">
-                  {card.title}<br />{card.titleZh}
-                </h3>
-                <p className="ql-desc">{card.desc}</p>
-              </div>
-            </CometCard>
-          ))}
+              </CometCard>
+            );
+          })}
         </div>
       </div>
     </>

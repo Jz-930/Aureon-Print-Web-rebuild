@@ -1,147 +1,103 @@
 import React from 'react';
-import { GlareCard } from './ui/glare-card';
+import { GlareCard } from "./ui/glare-card";
 
-export default function Products() {
+interface ProductsProps {
+  dict: any;
+  lang: string;
+}
+
+export default function Products({ dict, lang }: ProductsProps) {
+  const common = dict.common || {}; // safe fallback if common logic not passed in dict yet
+  // Actually we need to pass dict.products_section to titles and dict.products_data to items.
+  // In page.tsx: <Products dict={dict} ... /> or split?
+  // page.tsx passes dict={dict.products_section}. I need to access products_data.
+  // The structure in dict files: "products_section": {...}, "products_data": [...]
+  // Modifying page.tsx to pass the whole dict or specific parts?
+  // It's cleaner to pass the whole dict to components or specific subsets.
+  // I currently pass `dict.products_section` in `page.tsx`.
+  // I should change `page.tsx` to pass necessary data or `Products` should accept `products` and `section_info`.
+
+  // For now I'm writing `Products.tsx` assuming `dict` contains both or I'll fix `page.tsx` next.
+  // Let's assume `dict` has { title, subtitle, items: [...] } 
+  // currently `products_section` only has title/subtitle. `products_data` is separate.
+  // I should probably combine them or pass them separately.
+  // I will update `page.tsx` to pass `dict={dict}` (entire dict) or `dict={{...dict.products_section, items: dict.products_data, common: dict.common}}`.
+  // I'll update `page.tsx` next. 
+
+  // Here I assume `dict` has `items` and `common`.
+
   return (
-    <>
-      <section id="products" className="section bg-light py-20">
-        <div className="container mx-auto px-4">
-          <div className="section-header text-center mb-12">
-            <h2 className="section-title text-3xl font-bold mb-4">
-              <span className="lang-zh block md:inline">热门产品</span>
-              <span className="lang-en block md:inline md:ml-2">Top Sellers</span>
-            </h2>
-            <p className="section-desc text-gray-600">
-              <span className="lang-zh block">Aureon 最受欢迎的商务印刷解决方案</span>
-              <span className="lang-en block">Most popular printing solutions for your business.</span>
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Product 1: Business Cards */}
-            <GlareCard className="w-full mx-auto">
-              <div className="flex flex-col h-full bg-white rounded-2xl overflow-hidden text-slate-900 shadow-sm hover:shadow-xl transition-shadow duration-200">
-                <div className="w-full h-[200px] relative bg-gray-100 shrink-0">
-                  <img
-                    alt="Business Cards"
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                    src="restore/business-card.jpg"
-                  />
-                  <div className="absolute top-3 right-3 bg-pink-600 text-white text-xs font-bold px-3 py-1 rounded shadow-md z-10">HOT</div>
-                </div>
-                <div className="p-5 flex flex-col flex-1" style={{ padding: '1.25rem' }}>
-                  <div className="mb-3">
-                    <h3 className="text-lg font-bold mb-1">Business Cards 名片</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">Standard, Luxury, Spot UV available. <br />多种材质工艺可选,提升第一印象。</p>
-                  </div>
-                  <div className="flex items-center text-sm text-gray-500 mb-4 gap-3">
-                    <div className="flex items-center gap-1"><i className="fa-regular fa-clock"></i> 3-5 Days</div>
-                    <span className="text-gray-300">|</span>
-                    <div className="flex items-center gap-1"><i className="fa-solid fa-layer-group"></i> 100+ Qty</div>
-                  </div>
-                  <div className="mt-auto pt-4 flex justify-center" style={{ marginTop: 'auto', paddingTop: '1rem' }}>
-                    <a className="btn btn-outline py-2 px-6 text-sm font-semibold rounded-full border border-gray-300 hover:bg-gray-50 hover:text-primary transition-colors duration-200" href="#quote">
-                      <span className="lang-zh">立即询价</span>
-                      <span className="lang-en hidden">Get Quote</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </GlareCard>
-
-            {/* Product 2: Flyers */}
-            <GlareCard className="w-full mx-auto">
-              <div className="flex flex-col h-full bg-white rounded-2xl overflow-hidden text-slate-900 shadow-sm hover:shadow-xl transition-shadow duration-200">
-                <div className="w-full h-[200px] relative bg-gray-100 shrink-0">
-                  <img
-                    alt="Flyers"
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                    src="restore/flyers.png"
-                  />
-                </div>
-                <div className="p-5 flex flex-col flex-1" style={{ padding: '1.25rem' }}>
-                  <div className="mb-3">
-                    <h3 className="text-lg font-bold mb-1">Flyers & Leaflets 传单</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">A4/A5/DL Sizes. Gloss or Matte paper. <br />批量印刷成本低,适合地推与DM。</p>
-                  </div>
-                  <div className="flex items-center text-sm text-gray-500 mb-4 gap-3">
-                    <div className="flex items-center gap-1"><i className="fa-regular fa-clock"></i> 2-4 Days</div>
-                    <span className="text-gray-300">|</span>
-                    <div className="flex items-center gap-1"><i className="fa-solid fa-layer-group"></i> 500+ Qty</div>
-                  </div>
-                  <div className="mt-auto pt-4 flex justify-center" style={{ marginTop: 'auto', paddingTop: '1rem' }}>
-                    <a className="btn btn-outline py-2 px-6 text-sm font-semibold rounded-full border border-gray-300 hover:bg-gray-50 hover:text-primary transition-colors duration-200" href="#quote">
-                      <span className="lang-zh">立即询价</span>
-                      <span className="lang-en hidden">Get Quote</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </GlareCard>
-
-            {/* Product 3: Roll-up Banners */}
-            <GlareCard className="w-full mx-auto">
-              <div className="flex flex-col h-full bg-white rounded-2xl overflow-hidden text-slate-900 shadow-sm hover:shadow-xl transition-shadow duration-200">
-                <div className="w-full h-[200px] relative bg-gray-100 shrink-0">
-                  <img
-                    alt="Roll-up Banners"
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                    src="restore/roll-up-bannner.jpg"
-                  />
-                </div>
-                <div className="p-5 flex flex-col flex-1" style={{ padding: '1.25rem' }}>
-                  <div className="mb-3">
-                    <h3 className="text-lg font-bold mb-1">Roll-up Banners 易拉宝</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">Includes stand & carrying bag. <br />包含铝合金底座与收纳袋,展会必备。</p>
-                  </div>
-                  <div className="flex items-center text-sm text-gray-500 mb-4 gap-3">
-                    <div className="flex items-center gap-1"><i className="fa-regular fa-clock"></i> 24 Hours</div>
-                    <span className="text-gray-300">|</span>
-                    <div className="flex items-center gap-1"><i className="fa-solid fa-layer-group"></i> 1 Qty</div>
-                  </div>
-                  <div className="mt-auto pt-4 flex justify-center" style={{ marginTop: 'auto', paddingTop: '1rem' }}>
-                    <a className="btn btn-outline py-2 px-6 text-sm font-semibold rounded-full border border-gray-300 hover:bg-gray-50 hover:text-primary transition-colors duration-200" href="#quote">
-                      <span className="lang-zh">立即询价</span>
-                      <span className="lang-en hidden">Get Quote</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </GlareCard>
-
-            {/* Product 4: Stickers */}
-            <GlareCard className="w-full mx-auto">
-              <div className="flex flex-col h-full bg-white rounded-2xl overflow-hidden text-slate-900 shadow-sm hover:shadow-xl transition-shadow duration-200">
-                <div className="w-full h-[200px] relative bg-gray-100 shrink-0">
-                  <img
-                    alt="Stickers"
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                    src="restore/stickers.png"
-                  />
-                </div>
-                <div className="p-5 flex flex-col flex-1" style={{ padding: '1.25rem' }}>
-                  <div className="mb-3">
-                    <h3 className="text-lg font-bold mb-1">Stickers & Labels 贴纸</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">Custom die-cut shapes, vinyl or paper. <br />异形模切,卷标或单张,品牌包装神器。</p>
-                  </div>
-                  <div className="flex items-center text-sm text-gray-500 mb-4 gap-3">
-                    <div className="flex items-center gap-1"><i className="fa-regular fa-clock"></i> 3-5 Days</div>
-                    <span className="text-gray-300">|</span>
-                    <div className="flex items-center gap-1"><i className="fa-solid fa-layer-group"></i> Custom</div>
-                  </div>
-                  <div className="mt-auto pt-4 flex justify-center" style={{ marginTop: 'auto', paddingTop: '1rem' }}>
-                    <a className="btn btn-outline py-2 px-6 text-sm font-semibold rounded-full border border-gray-300 hover:bg-gray-50 hover:text-primary transition-colors duration-200" href="#quote">
-                      <span className="lang-zh">立即询价</span>
-                      <span className="lang-en hidden">Get Quote</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </GlareCard>
-
-          </div>
+    <section id="products" className="py-20 bg-gray-50" style={{ padding: '80px 0' }}>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12" style={{ textAlign: 'center', marginBottom: '80px' }}>
+          <h2 className="section-title text-4xl font-bold mb-4">{dict.title}</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto" style={{ textAlign: 'center', margin: '0 auto' }}>{dict.subtitle}</p>
         </div>
-      </section>
-    </>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {dict.items && dict.items.map((product: any) => (
+            <GlareCard key={product.id} className="h-full">
+              <div className="relative w-full h-full bg-white rounded-2xl overflow-hidden shadow-sm">
+                {/* HOT Badge */}
+                {product.hot && (
+                  <div className="absolute top-3 right-3 z-10">
+                    <span className="inline-block bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full animate-pulse">
+                      {dict.common?.hot || 'HOT'}
+                    </span>
+                  </div>
+                )}
+
+                {/* Image Container - full width, no padding */}
+                <div style={{ width: '100%', aspectRatio: '4/3', backgroundColor: '#f3f4f6', overflow: 'hidden' }}>
+                  <img
+                    alt={product.title}
+                    loading="lazy"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    src={product.image}
+                  />
+                </div>
+
+                {/* Content Area */}
+                <div style={{ padding: '20px' }}>
+                  <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#111827', marginBottom: '8px' }}>{product.title}</h3>
+                  <p style={{ color: '#6b7280', fontSize: '14px', lineHeight: '1.5', marginBottom: '16px', minHeight: '48px' }}>{product.description}</p>
+
+                  {/* Meta Info */}
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '16px', fontSize: '12px', color: '#9ca3af', marginBottom: '16px' }}>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                      <i className="fa-regular fa-clock"></i> {product.time}
+                    </span>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                      <i className="fa-solid fa-print"></i> {product.qty}
+                    </span>
+                  </div>
+
+                  {/* CTA Button */}
+                  <a
+                    href="#quote"
+                    className="product-cta-btn"
+                    style={{
+                      display: 'block',
+                      width: '100%',
+                      padding: '12px 0',
+                      textAlign: 'center',
+                      fontSize: '14px',
+                      fontWeight: 600,
+                      borderRadius: '9999px',
+                      border: '2px solid #059669',
+                      color: '#059669',
+                      backgroundColor: 'transparent',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    {dict.common?.get_quote || 'Get Quote'}
+                  </a>
+                </div>
+              </div>
+            </GlareCard>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

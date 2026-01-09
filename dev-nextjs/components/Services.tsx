@@ -1,9 +1,107 @@
+'use client';
 import React from 'react';
+import { GlareCard } from './ui/glare-card';
+import Image from 'next/image';
 
-export default function Services() {
+interface ServiceItem {
+  title: string;
+  desc: string;
+  img: string;
+}
+
+interface ServicesProps {
+  dict: any;
+  lang: string;
+}
+
+function ServiceCard({ item }: { item: ServiceItem }) {
   return (
-    <>
-<section id="services" className="section bg-light"><div className="container"><div className="section-header"><h2 className="section-title"><span className="lang-zh">服务项目</span><span className="lang-en">Our Services</span></h2><p className="section-desc"><span className="lang-zh">探索我们全面的印刷与品牌解决方案</span><span className="lang-en">Explore our comprehensive printing and branding solutions.</span></p></div><div className="service-group"><div className="service-category-header"><i className="fa-solid fa-print"></i> General & Marketing</div><div className="service-items-grid"><div className="flex items-center justify-center w-full h-full" style={{perspective: '1000px'}}><div className="flex items-center justify-center relative transition-all duration-200 ease-linear inter-var w-full h-full" style={{transformStyle: 'preserve-3d'}}><div className="[transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d] service-3d-card relative group/card border-transparent shadow-sm hover:shadow-xl w-full h-full transition-all duration-300"><div className="w-fit transition duration-200 ease-linear service-3d-img"><img alt="Digital Printing 数位印刷" loading="lazy" decoding="async" data-nimg="fill" className="object-cover group-hover/card:scale-105 transition-transform duration-500" style={{position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent'}} src="restore/Digital-printing.jpg" /></div><div className="w-fit transition duration-200 ease-linear service-3d-title">Digital Printing 数位印刷</div><div className="w-fit transition duration-200 ease-linear service-3d-desc">适合少量、急件、个性化打印。</div></div></div></div><div className="flex items-center justify-center w-full h-full" style={{perspective: '1000px'}}><div className="flex items-center justify-center relative transition-all duration-200 ease-linear inter-var w-full h-full" style={{transformStyle: 'preserve-3d'}}><div className="[transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d] service-3d-card relative group/card border-transparent shadow-sm hover:shadow-xl w-full h-full transition-all duration-300"><div className="w-fit transition duration-200 ease-linear service-3d-img"><img alt="Offset Printing 平版印刷" loading="lazy" decoding="async" data-nimg="fill" className="object-cover group-hover/card:scale-105 transition-transform duration-500" style={{position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent'}} src="restore/Offset-Printing.jpg" /></div><div className="w-fit transition duration-200 ease-linear service-3d-title">Offset Printing 平版印刷</div><div className="w-fit transition duration-200 ease-linear service-3d-desc">大批量彩色印刷,单位成本低,颜色稳定。</div></div></div></div><div className="flex items-center justify-center w-full h-full" style={{perspective: '1000px'}}><div className="flex items-center justify-center relative transition-all duration-200 ease-linear inter-var w-full h-full" style={{transformStyle: 'preserve-3d'}}><div className="[transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d] service-3d-card relative group/card border-transparent shadow-sm hover:shadow-xl w-full h-full transition-all duration-300"><div className="w-fit transition duration-200 ease-linear service-3d-img"><img alt="Brochures / Booklets 画册" loading="lazy" decoding="async" data-nimg="fill" className="object-cover group-hover/card:scale-105 transition-transform duration-500" style={{position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent'}} src="restore/Brochures -Booklets.jpg" /></div><div className="w-fit transition duration-200 ease-linear service-3d-title">Brochures / Booklets 画册</div><div className="w-fit transition duration-200 ease-linear service-3d-desc">骑马钉、胶装,展示企业与产品形象。</div></div></div></div><div className="flex items-center justify-center w-full h-full" style={{perspective: '1000px'}}><div className="flex items-center justify-center relative transition-all duration-200 ease-linear inter-var w-full h-full" style={{transformStyle: 'preserve-3d'}}><div className="[transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d] service-3d-card relative group/card border-transparent shadow-sm hover:shadow-xl w-full h-full transition-all duration-300"><div className="w-fit transition duration-200 ease-linear service-3d-img"><img alt="Presentation Folders 文件夹" loading="lazy" decoding="async" data-nimg="fill" className="object-cover group-hover/card:scale-105 transition-transform duration-500" style={{position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent'}} src="restore/Presentation-Folders.jpg" /></div><div className="w-fit transition duration-200 ease-linear service-3d-title">Presentation Folders 文件夹</div><div className="w-fit transition duration-200 ease-linear service-3d-desc">带名片槽,提升商务提案专业度。</div></div></div></div></div></div><div className="service-group"><div className="service-category-header"><i className="fa-solid fa-sign-hanging"></i> Signs & Displays</div><div className="service-items-grid"><div className="flex items-center justify-center w-full h-full" style={{perspective: '1000px'}}><div className="flex items-center justify-center relative transition-all duration-200 ease-linear inter-var w-full h-full" style={{transformStyle: 'preserve-3d'}}><div className="[transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d] service-3d-card relative group/card border-transparent shadow-sm hover:shadow-xl w-full h-full transition-all duration-300"><div className="w-fit transition duration-200 ease-linear service-3d-img"><img alt="Large Format Banners 喷绘横幅" loading="lazy" decoding="async" data-nimg="fill" className="object-cover group-hover/card:scale-105 transition-transform duration-500" style={{position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent'}} src="restore/Large-Format-Banners.jpg" /></div><div className="w-fit transition duration-200 ease-linear service-3d-title">Large Format Banners 喷绘横幅</div><div className="w-fit transition duration-200 ease-linear service-3d-desc">户外耐候材质,打孔加绳,适合悬挂。</div></div></div></div><div className="flex items-center justify-center w-full h-full" style={{perspective: '1000px'}}><div className="flex items-center justify-center relative transition-all duration-200 ease-linear inter-var w-full h-full" style={{transformStyle: 'preserve-3d'}}><div className="[transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d] service-3d-card relative group/card border-transparent shadow-sm hover:shadow-xl w-full h-full transition-all duration-300"><div className="w-fit transition duration-200 ease-linear service-3d-img"><img alt="Foam Board Signs 发泡板" loading="lazy" decoding="async" data-nimg="fill" className="object-cover group-hover/card:scale-105 transition-transform duration-500" style={{position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent'}} src="restore/Foam-Board-Signs.jpg" /></div><div className="w-fit transition duration-200 ease-linear service-3d-title">Foam Board Signs 发泡板</div><div className="w-fit transition duration-200 ease-linear service-3d-desc">轻便平整,适合短期活动展示或菜单板。</div></div></div></div><div className="flex items-center justify-center w-full h-full" style={{perspective: '1000px'}}><div className="flex items-center justify-center relative transition-all duration-200 ease-linear inter-var w-full h-full" style={{transformStyle: 'preserve-3d'}}><div className="[transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d] service-3d-card relative group/card border-transparent shadow-sm hover:shadow-xl w-full h-full transition-all duration-300"><div className="w-fit transition duration-200 ease-linear service-3d-img"><img alt="Window Graphics 玻璃贴" loading="lazy" decoding="async" data-nimg="fill" className="object-cover group-hover/card:scale-105 transition-transform duration-500" style={{position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent'}} src="restore/Window-Graphics.jpg" /></div><div className="w-fit transition duration-200 ease-linear service-3d-title">Window Graphics 玻璃贴</div><div className="w-fit transition duration-200 ease-linear service-3d-desc">磨砂贴、单透贴、刻字膜,装饰橱窗。</div></div></div></div><div className="flex items-center justify-center w-full h-full" style={{perspective: '1000px'}}><div className="flex items-center justify-center relative transition-all duration-200 ease-linear inter-var w-full h-full" style={{transformStyle: 'preserve-3d'}}><div className="[transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d] service-3d-card relative group/card border-transparent shadow-sm hover:shadow-xl w-full h-full transition-all duration-300"><div className="w-fit transition duration-200 ease-linear service-3d-img"><img alt="Backdrops 展会背景板" loading="lazy" decoding="async" data-nimg="fill" className="object-cover group-hover/card:scale-105 transition-transform duration-500" style={{position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent'}} src="restore/Backdrops.jpg" /></div><div className="w-fit transition duration-200 ease-linear service-3d-title">Backdrops 展会背景板</div><div className="w-fit transition duration-200 ease-linear service-3d-desc">大型媒体墙,安装简便,视觉冲击力强。</div></div></div></div></div></div><div className="service-group"><div className="service-category-header"><i className="fa-solid fa-wand-magic-sparkles"></i> Finishing & Branding</div><div className="service-items-grid"><div className="flex items-center justify-center w-full h-full" style={{perspective: '1000px'}}><div className="flex items-center justify-center relative transition-all duration-200 ease-linear inter-var w-full h-full" style={{transformStyle: 'preserve-3d'}}><div className="[transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d] service-3d-card relative group/card border-transparent shadow-sm hover:shadow-xl w-full h-full transition-all duration-300"><div className="w-fit transition duration-200 ease-linear service-3d-img"><img alt="Packaging Boxes 包装盒" loading="lazy" decoding="async" data-nimg="fill" className="object-cover group-hover/card:scale-105 transition-transform duration-500" style={{position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent'}} src="restore/Packaging-Boxes.jpg" /></div><div className="w-fit transition duration-200 ease-linear service-3d-title">Packaging Boxes 包装盒</div><div className="w-fit transition duration-200 ease-linear service-3d-desc">礼盒、产品盒、运输外箱定制。</div></div></div></div><div className="flex items-center justify-center w-full h-full" style={{perspective: '1000px'}}><div className="flex items-center justify-center relative transition-all duration-200 ease-linear inter-var w-full h-full" style={{transformStyle: 'preserve-3d'}}><div className="[transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d] service-3d-card relative group/card border-transparent shadow-sm hover:shadow-xl w-full h-full transition-all duration-300"><div className="w-fit transition duration-200 ease-linear service-3d-img"><img alt="Foil Stamping 烫金/烫银" loading="lazy" decoding="async" data-nimg="fill" className="object-cover group-hover/card:scale-105 transition-transform duration-500" style={{position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent'}} src="restore/Foil-Stamping.jpg" /></div><div className="w-fit transition duration-200 ease-linear service-3d-title">Foil Stamping 烫金/烫银</div><div className="w-fit transition duration-200 ease-linear service-3d-desc">增加金属光泽与质感,高端大气。</div></div></div></div><div className="flex items-center justify-center w-full h-full" style={{perspective: '1000px'}}><div className="flex items-center justify-center relative transition-all duration-200 ease-linear inter-var w-full h-full" style={{transformStyle: 'preserve-3d'}}><div className="[transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d] service-3d-card relative group/card border-transparent shadow-sm hover:shadow-xl w-full h-full transition-all duration-300"><div className="w-fit transition duration-200 ease-linear service-3d-img"><img alt="Die Cutting 模切" loading="lazy" decoding="async" data-nimg="fill" className="object-cover group-hover/card:scale-105 transition-transform duration-500" style={{position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent'}} src="restore/Die-Cutting.jpg" /></div><div className="w-fit transition duration-200 ease-linear service-3d-title">Die Cutting 模切</div><div className="w-fit transition duration-200 ease-linear service-3d-desc">异形贴纸、卡片,释放创意形状。</div></div></div></div><div className="flex items-center justify-center w-full h-full" style={{perspective: '1000px'}}><div className="flex items-center justify-center relative transition-all duration-200 ease-linear inter-var w-full h-full" style={{transformStyle: 'preserve-3d'}}><div className="[transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d] service-3d-card relative group/card border-transparent shadow-sm hover:shadow-xl w-full h-full transition-all duration-300"><div className="w-fit transition duration-200 ease-linear service-3d-img"><img alt="Lamination 覆膜" loading="lazy" decoding="async" data-nimg="fill" className="object-cover group-hover/card:scale-105 transition-transform duration-500" style={{position: 'absolute', height: '100%', width: '100%', left: '0', top: '0', right: '0', bottom: '0', color: 'transparent'}} src="restore/Lamination.jpg" /></div><div className="w-fit transition duration-200 ease-linear service-3d-title">Lamination 覆膜</div><div className="w-fit transition duration-200 ease-linear service-3d-desc">亮膜鲜艳,哑膜高级,增加耐用性。</div></div></div></div></div></div></div></section>
-    </>
+    <GlareCard className="w-full h-full">
+      <div className="flex flex-col h-full bg-white rounded-xl overflow-hidden shadow-lg border border-neutral-100">
+        <div className="w-full h-[200px] relative bg-gray-100 shrink-0">
+          <Image
+            src={item.img}
+            alt={item.title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+        <div className="p-5 flex flex-col flex-1" style={{ padding: '1.25rem' }}>
+          <h3 className="text-lg font-bold text-neutral-800 mb-2 border-b border-neutral-200 pb-2" style={{ marginBottom: '0.5rem', paddingBottom: '0.5rem' }}>
+            {item.title}
+          </h3>
+          <p className="text-sm text-neutral-500 leading-relaxed">
+            {item.desc}
+          </p>
+        </div>
+      </div>
+    </GlareCard>
+  );
+}
+
+export default function Services({ dict, lang }: ServicesProps) {
+  // dict contains services_section info
+  // We need items and category titles.
+  // We'll assume dict includes { title, subtitle, categories: {...}, data: {...} } 
+  // passed from page.tsx combined logic.
+
+  const categories = dict.categories || {};
+  const data = dict.data || {};
+
+  return (
+    <section id="services" className="section bg-light">
+      <div className="container">
+        <div className="section-header">
+          <h2 className="section-title">
+            {dict.title}
+          </h2>
+          <p className="section-desc">
+            {dict.subtitle}
+          </p>
+        </div>
+
+        {/* General & Marketing */}
+        {data.marketing && (
+          <div className="service-group">
+            <div className="service-category-header">
+              <i className="fa-solid fa-print"></i> {categories.marketing || "General & Marketing"}
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+              {data.marketing.map((item: ServiceItem) => (
+                <ServiceCard key={item.title} item={item} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Signs & Displays */}
+        {data.signs && (
+          <div className="service-group">
+            <div className="service-category-header">
+              <i className="fa-solid fa-sign-hanging"></i> {categories.signs || "Signs & Displays"}
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+              {data.signs.map((item: ServiceItem) => (
+                <ServiceCard key={item.title} item={item} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Finishing & Branding */}
+        {data.finishing && (
+          <div className="service-group">
+            <div className="service-category-header">
+              <i className="fa-solid fa-wand-magic-sparkles"></i> {categories.finishing || "Finishing & Branding"}
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+              {data.finishing.map((item: ServiceItem) => (
+                <ServiceCard key={item.title} item={item} />
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
   );
 }

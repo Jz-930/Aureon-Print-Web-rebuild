@@ -1,0 +1,279 @@
+{
+    "header": {
+        "title": "Aureon Printing",
+        "services": "Services",
+        "products": "Products",
+        "works": "Works",
+        "about": "About",
+        "contact": "Contact",
+        "quote": "Get Quote",
+        "toggle": "EN / 中"
+    },
+    "hero": {
+        "title": "Make ideas tangible and visible.",
+        "subtitle": "One-stop shop for Digital, Offset & Large Format Printing. Small runs welcome.",
+        "quote_btn": "Get a Quote",
+        "products_btn": "Hot Products"
+    },
+    "footer": {
+        "brand_desc": "Your trusted local partner for high-quality printing, signage, and branding solutions.",
+        "services_title": "Services",
+        "contact_title": "Contact Us",
+        "links": [
+            {
+                "label": "Business Cards",
+                "href": "#services"
+            },
+            {
+                "label": "Flyers & Brochures",
+                "href": "#services"
+            },
+            {
+                "label": "Signage & Displays",
+                "href": "#services"
+            },
+            {
+                "label": "Packaging",
+                "href": "#services"
+            }
+        ],
+        "address": "123 Print Street, City",
+        "copyright": "© 2024 Aureon Printing. All Rights Reserved."
+    },
+    "products_section": {
+        "title": "Top Sellers",
+        "subtitle": "Most popular printing solutions for your business."
+    },
+    "features_section": {
+        "title": "Why Aureon Printing?",
+        "subtitle": "Quality and speed you can trust."
+    },
+    "services_section": {
+        "title": "Our Services",
+        "subtitle": "Explore our comprehensive printing and branding solutions."
+    },
+    "services_categories": {
+        "marketing": "General & Marketing",
+        "signs": "Signs & Displays",
+        "finishing": "Finishing & Branding"
+    },
+    "services_data": {
+        "marketing": [
+            {
+                "title": "Digital Printing",
+                "desc": "Suitable for small quanitity, urgent, and personalized prints.",
+                "img": "/restore/Digital-printing.jpg"
+            },
+            {
+                "title": "Offset Printing",
+                "desc": "High volume, low cost per unit, consistent color.",
+                "img": "/restore/Offset-Printing.jpg"
+            },
+            {
+                "title": "Brochures / Booklets",
+                "desc": "Saddle stitched or perfect bound.",
+                "img": "/restore/Brochures -Booklets.jpg"
+            },
+            {
+                "title": "Presentation Folders",
+                "desc": "Professional folders with business card slots.",
+                "img": "/restore/Presentation-Folders.jpg"
+            }
+        ],
+        "signs": [
+            {
+                "title": "Large Format Banners",
+                "desc": "Outdoor durable, with eyelets.",
+                "img": "/restore/Large-Format-Banners.jpg"
+            },
+            {
+                "title": "Foam Board Signs",
+                "desc": "Lightweight and flat, great for events.",
+                "img": "/restore/Foam-Board-Signs.jpg"
+            },
+            {
+                "title": "Window Graphics",
+                "desc": "Frosted, perforated, or vinyl cut decals.",
+                "img": "/restore/Window-Graphics.jpg"
+            },
+            {
+                "title": "Backdrops",
+                "desc": "Large media walls, easy to install.",
+                "img": "/restore/Backdrops.jpg"
+            }
+        ],
+        "finishing": [
+            {
+                "title": "Packaging Boxes",
+                "desc": "Custom gift boxes and product packaging.",
+                "img": "/restore/Packaging-Boxes.jpg"
+            },
+            {
+                "title": "Foil Stamping",
+                "desc": "Add metallic shine and premium feel.",
+                "img": "/restore/Foil-Stamping.jpg"
+            },
+            {
+                "title": "Die Cutting",
+                "desc": "Custom shapes for stickers or cards.",
+                "img": "/restore/Die-Cutting.jpg"
+            },
+            {
+                "title": "Lamination",
+                "desc": "Gloss or matte, adds durability.",
+                "img": "/restore/Lamination.jpg"
+            }
+        ]
+    },
+    "products_data": [
+        {
+            "id": "business-cards",
+            "title": "Business Cards",
+            "description": "Standard, Luxury, Spot UV available.",
+            "time": "3-5 Days",
+            "qty": "100+ Qty",
+            "image": "/restore/business-card.jpg",
+            "hot": true
+        },
+        {
+            "id": "flyers",
+            "title": "Flyers & Leaflets",
+            "description": "A4/A5/DL Sizes. Gloss or Matte paper.",
+            "time": "2-4 Days",
+            "qty": "500+ Qty",
+            "image": "/restore/flyers.png"
+        },
+        {
+            "id": "roll-up",
+            "title": "Roll-up Banners",
+            "description": "Includes stand & carrying bag.",
+            "time": "24 Hours",
+            "qty": "1 Qty",
+            "image": "/restore/roll-up-bannner.jpg"
+        },
+        {
+            "id": "stickers",
+            "title": "Stickers & Labels",
+            "description": "Custom die-cut shapes, vinyl or paper.",
+            "time": "3-5 Days",
+            "qty": "Custom",
+            "image": "/restore/stickers.png"
+        }
+    ],
+    "quick_links": [
+        {
+            "title": "General Printing",
+            "desc": "Digital & Offset"
+        },
+        {
+            "title": "Marketing",
+            "desc": "Cards, Flyers, Brochures"
+        },
+        {
+            "title": "Signs & Displays",
+            "desc": "Roll-ups, Banners, Signs"
+        },
+        {
+            "title": "Packaging",
+            "desc": "Boxes, Stickers, Labels"
+        },
+        {
+            "title": "Stationery",
+            "desc": "Letterheads, Envelopes"
+        },
+        {
+            "title": "Finishing",
+            "desc": "Foil, Lamination, Die-cut"
+        }
+    ],
+    "features_data": [
+        {
+            "title": "Fast Turnaround",
+            "desc": "Standard 3-5 days. Rush orders welcome."
+        },
+        {
+            "title": "One-stop Shop",
+            "desc": "Design, print, finish, install - we do it all."
+        },
+        {
+            "title": "Low Minimum",
+            "desc": "Small runs & personal projects are welcome."
+        },
+        {
+            "title": "Expert Support",
+            "desc": "Free file check & professional advice."
+        }
+    ],
+    "gallery": {
+        "title": "Works Gallery",
+        "categories": [
+            "All",
+            "Branding",
+            "Signs",
+            "Packaging"
+        ],
+        "items": [
+            {
+                "title": "Cafe Branding",
+                "desc": "Menu & Business Cards",
+                "cat": "branding",
+                "img": "restore/Cafe-Branding.jpg"
+            },
+            {
+                "title": "Luxury Gift Box",
+                "desc": "Custom Size with Gold Foil",
+                "cat": "packaging",
+                "img": "restore/Luxury-Gift-Box.jpg"
+            },
+            {
+                "title": "Store Signage",
+                "desc": "3D Channel Letters",
+                "cat": "signs",
+                "img": "restore/Store-Signage.jpg"
+            },
+            {
+                "title": "Event Backdrop",
+                "desc": "Large Format Printing",
+                "cat": "signs",
+                "img": "restore/Event-Backdrop-Large-Format-Printing.jpg"
+            }
+        ]
+    },
+    "quote_form": {
+        "title": "Get a Quote",
+        "desc": "Fill out the form and we will reply within 24 hours.",
+        "name_label": "Name",
+        "contact_label": "Contact (Email/Phone)",
+        "type_label": "Service Type",
+        "qty_label": "Quantity",
+        "details_label": "Project Details",
+        "details_placeholder": "e.g. 300g Art Paper, Matte Lamination...",
+        "submit": "Submit Request",
+        "file_guide_title": "Design & File Guide",
+        "guide_formats": "Formats: PDF, AI, PSD, High-res JPG",
+        "guide_res": "Resolution: 300dpi (Print), 150dpi (Large Format)",
+        "guide_bleed": "Bleed: 3mm / 0.125\" on all sides",
+        "guide_color": "Color: CMYK Mode (Not RGB)"
+    },
+    "faq": {
+        "title": "FAQ",
+        "items": [
+            {
+                "q": "What is the MOQ? (Minimum Order Quantity)",
+                "a": "Digital printing supports small runs (e.g. 1 box of cards). Offset suggests 500+ copies for best value."
+            },
+            {
+                "q": "How long is the turnaround time?",
+                "a": "Standard products (cards, flyers) take 3-5 working days. Large format or special finishing may take longer."
+            },
+            {
+                "q": "Can you design for me?",
+                "a": "Yes. We have a professional design team. Design fees are quoted based on complexity."
+            }
+        ]
+    },
+    "common": {
+        "get_quote": "Get Quote",
+        "hot": "HOT"
+    }
+}

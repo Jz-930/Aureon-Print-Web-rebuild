@@ -1,0 +1,279 @@
+{
+    "header": {
+        "title": "Aureon Printing 元色印页",
+        "services": "服务",
+        "products": "热门产品",
+        "works": "案例",
+        "about": "关于",
+        "contact": "联系",
+        "quote": "快速报价",
+        "toggle": "EN / 中"
+    },
+    "hero": {
+        "title": "让创意摸得着、看得见",
+        "subtitle": "数码印刷、平版印刷、大型喷绘到后加工一站式完成,少量也能印,交期灵活。",
+        "quote_btn": "获取报价",
+        "products_btn": "热门产品"
+    },
+    "footer": {
+        "brand_desc": "本地实体印刷门店 + 线上高效服务。我们致力于为您提供高品质、高性价比的印刷与展示方案。",
+        "services_title": "服务项目",
+        "contact_title": "联系我们",
+        "links": [
+            {
+                "label": "Business Cards 名片",
+                "href": "#services"
+            },
+            {
+                "label": "Flyers & Brochures 宣传单",
+                "href": "#services"
+            },
+            {
+                "label": "Signage & Displays 招牌",
+                "href": "#services"
+            },
+            {
+                "label": "Packaging 包装",
+                "href": "#services"
+            }
+        ],
+        "address": "123 Print Street, City",
+        "copyright": "© 2024 Aureon Printing. 版权所有."
+    },
+    "products_section": {
+        "title": "热门产品",
+        "subtitle": "Aureon 最受欢迎的商务印刷解决方案"
+    },
+    "features_section": {
+        "title": "为什么选择 Aureon?",
+        "subtitle": "值得信赖的品质与速度"
+    },
+    "services_section": {
+        "title": "我们的服务",
+        "subtitle": "探索我们全面的印刷与品牌解决方案"
+    },
+    "services_categories": {
+        "marketing": "一般印刷 & 商务宣传",
+        "signs": "展示 & 标示",
+        "finishing": "包装 & 后加工"
+    },
+    "services_data": {
+        "marketing": [
+            {
+                "title": "Digital Printing 数位印刷",
+                "desc": "适合少量、急件、个性化打印。",
+                "img": "/restore/Digital-printing.jpg"
+            },
+            {
+                "title": "Offset Printing 平版印刷",
+                "desc": "大批量彩色印刷,单位成本低,颜色稳定。",
+                "img": "/restore/Offset-Printing.jpg"
+            },
+            {
+                "title": "Brochures / Booklets 画册",
+                "desc": "骑马钉、胶装,展示企业与产品形象。",
+                "img": "/restore/Brochures -Booklets.jpg"
+            },
+            {
+                "title": "Presentation Folders 文件夹",
+                "desc": "带名片槽,提升商务提案专业度。",
+                "img": "/restore/Presentation-Folders.jpg"
+            }
+        ],
+        "signs": [
+            {
+                "title": "Large Format Banners 喷绘横幅",
+                "desc": "户外耐候材质,打孔加绳,适合悬挂。",
+                "img": "/restore/Large-Format-Banners.jpg"
+            },
+            {
+                "title": "Foam Board Signs 发泡板",
+                "desc": "轻便平整,适合短期活动展示或菜单板。",
+                "img": "/restore/Foam-Board-Signs.jpg"
+            },
+            {
+                "title": "Window Graphics 玻璃贴",
+                "desc": "磨砂贴、单透贴、刻字膜,装饰橱窗。",
+                "img": "/restore/Window-Graphics.jpg"
+            },
+            {
+                "title": "Backdrops 展会背景板",
+                "desc": "大型媒体墙,安装简便,视觉冲击力强。",
+                "img": "/restore/Backdrops.jpg"
+            }
+        ],
+        "finishing": [
+            {
+                "title": "Packaging Boxes 包装盒",
+                "desc": "礼盒、产品盒、运输外箱定制。",
+                "img": "/restore/Packaging-Boxes.jpg"
+            },
+            {
+                "title": "Foil Stamping 烫金/烫银",
+                "desc": "增加金属光泽与质感,高端大气。",
+                "img": "/restore/Foil-Stamping.jpg"
+            },
+            {
+                "title": "Die Cutting 模切",
+                "desc": "异形贴纸、卡片,释放创意形状。",
+                "img": "/restore/Die-Cutting.jpg"
+            },
+            {
+                "title": "Lamination 覆膜",
+                "desc": "亮膜鲜艳,哑膜高级,增加耐用性。",
+                "img": "/restore/Lamination.jpg"
+            }
+        ]
+    },
+    "products_data": [
+        {
+            "id": "business-cards",
+            "title": "Business Cards 名片",
+            "description": "多种材质工艺可选,提升第一印象。",
+            "time": "3-5 天",
+            "qty": "100+ 起印",
+            "image": "/restore/business-card.jpg",
+            "hot": true
+        },
+        {
+            "id": "flyers",
+            "title": "Flyers & Leaflets 传单",
+            "description": "批量印刷成本低,适合地推与DM。",
+            "time": "2-4 天",
+            "qty": "500+ 起印",
+            "image": "/restore/flyers.png"
+        },
+        {
+            "id": "roll-up",
+            "title": "Roll-up Banners 易拉宝",
+            "description": "包含铝合金底座与收纳袋,展会必备。",
+            "time": "24 小时",
+            "qty": "1 个起",
+            "image": "/restore/roll-up-bannner.jpg"
+        },
+        {
+            "id": "stickers",
+            "title": "Stickers & Labels 贴纸",
+            "description": "异形模切,卷标或单张,品牌包装神器。",
+            "time": "3-5 天",
+            "qty": "定制数量",
+            "image": "/restore/stickers.png"
+        }
+    ],
+    "quick_links": [
+        {
+            "title": "一般印刷",
+            "desc": "数码 & 平版印刷"
+        },
+        {
+            "title": "商务宣传",
+            "desc": "名片、传单、画册"
+        },
+        {
+            "title": "展示与标示",
+            "desc": "易拉宝、横幅、招牌"
+        },
+        {
+            "title": "品牌包装",
+            "desc": "包装盒、贴纸、标签"
+        },
+        {
+            "title": "商务文具",
+            "desc": "信纸、信封、联单"
+        },
+        {
+            "title": "后加工",
+            "desc": "烫金、覆膜、模切"
+        }
+    ],
+    "features_data": [
+        {
+            "title": "快速交付",
+            "desc": "标准订单 3-5 工作日,急单可咨询。"
+        },
+        {
+            "title": "一站式印刷",
+            "desc": "从设计、印刷到后加工、安装全搞定。"
+        },
+        {
+            "title": "小量也划算",
+            "desc": "少量试印、个人项目都欢迎。"
+        },
+        {
+            "title": "专业支持",
+            "desc": "免费文件检查和专业工艺建议。"
+        }
+    ],
+    "gallery": {
+        "title": "精选案例",
+        "categories": [
+            "All",
+            "品牌 Branding",
+            "展示 Signs",
+            "包装 Packaging"
+        ],
+        "items": [
+            {
+                "title": "Cafe Branding",
+                "desc": "Menu & Business Cards",
+                "cat": "branding",
+                "img": "restore/Cafe-Branding.jpg"
+            },
+            {
+                "title": "Luxury Gift Box",
+                "desc": "Custom Size with Gold Foil",
+                "cat": "packaging",
+                "img": "restore/Luxury-Gift-Box.jpg"
+            },
+            {
+                "title": "Store Signage",
+                "desc": "3D Channel Letters",
+                "cat": "signs",
+                "img": "restore/Store-Signage.jpg"
+            },
+            {
+                "title": "Event Backdrop",
+                "desc": "Large Format Printing",
+                "cat": "signs",
+                "img": "restore/Event-Backdrop-Large-Format-Printing.jpg"
+            }
+        ]
+    },
+    "quote_form": {
+        "title": "获取报价",
+        "desc": "填写需求,我们将在 24 小时内回复。",
+        "name_label": "姓名 Name",
+        "contact_label": "联系方式 Contact (Email/Phone)",
+        "type_label": "服务类型 Service Type",
+        "qty_label": "数量 Quantity",
+        "details_label": "需求详情 Project Details (尺寸、纸张、工艺)",
+        "details_placeholder": "例如:300g 铜版纸,双面覆哑膜,需要设计...",
+        "submit": "提交询价",
+        "file_guide_title": "文件指南 Design & File Guide",
+        "guide_formats": "格式 Formats: PDF, AI, PSD, High-res JPG",
+        "guide_res": "分辨率 Resolution: 300dpi (Print), 150dpi (Large Format)",
+        "guide_bleed": "出血 Bleed: 3mm / 0.125\" on all sides",
+        "guide_color": "颜色 Color: CMYK Mode (Not RGB)"
+    },
+    "faq": {
+        "title": "常见问题 FAQ",
+        "items": [
+            {
+                "q": "最小起印量是多少?(MOQ)",
+                "a": "数码印刷支持极少量起印(如名片 1 盒起),平版印刷建议 500 份以上性价比最高。"
+            },
+            {
+                "q": "通常需要多长时间交货?",
+                "a": "标准产品(名片、单页)通常 3-5 个工作日。大型喷绘或特殊工艺可能需要更多时间。急单请直接联系客服。"
+            },
+            {
+                "q": "可以帮我设计吗?",
+                "a": "可以。我们拥有专业的设计团队,可提供从排版优化到全案设计的服务,费用根据复杂度单独报价。"
+            }
+        ]
+    },
+    "common": {
+        "get_quote": "立即询价",
+        "hot": "热卖"
+    }
+}

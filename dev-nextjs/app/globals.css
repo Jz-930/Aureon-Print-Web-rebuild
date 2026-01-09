@@ -210,6 +210,18 @@
   color: white !important;
 }
 
+/* ========================================= */
+/* Fix: Product CTA button hover            */
+/* ========================================= */
+.product-cta-btn {
+  transition: all 0.2s ease !important;
+}
+
+.product-cta-btn:hover {
+  background-color: #059669 !important;
+  color: white !important;
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -283,6 +295,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
