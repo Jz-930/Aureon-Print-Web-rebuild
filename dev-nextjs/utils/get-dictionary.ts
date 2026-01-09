@@ -8,9 +8,10 @@ const dictionaries = {
     zh: () => import('@/dictionaries/zh.json').then((module) => module.default),
 };
 
-export const getDictionary = async (locale: Locale) => {
-    if (locale && dictionaries[locale]) {
-        return dictionaries[locale]();
+export const getDictionary = async (locale: string) => {
+    const key = locale as keyof typeof dictionaries;
+    if (key && dictionaries[key]) {
+        return dictionaries[key]();
     }
     return dictionaries.en();
 };

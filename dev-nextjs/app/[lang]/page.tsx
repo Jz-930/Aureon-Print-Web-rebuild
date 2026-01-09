@@ -11,7 +11,7 @@ import Footer from '../../components/Footer';
 import { getDictionary } from '../../utils/get-dictionary';
 import { Locale } from '../../i18n-config';
 
-export default async function Home(props: { params: Promise<{ lang: Locale }> }) {
+export default async function Home(props: { params: Promise<{ lang: string }> }) {
   const params = await props.params;
   const dict = await getDictionary(params.lang);
 
