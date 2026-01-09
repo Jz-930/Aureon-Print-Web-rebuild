@@ -24,3 +24,167 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Fix: Hero grid cells - color gradient from left to right on hover */
+/* Grid is 27 columns x 12 rows = 324 cells */
+/* 6 colors divided into segments: cols 1-4, 5-9, 10-13, 14-18, 19-22, 23-27 */
+
+.cell {
+  background-color: #202d2b !important;
+}
+
+/* Helper: Generate column positions for 27-column grid */
+/* Column 1: cells 1, 28, 55, 82... (every 27th cell starting from position) */
+
+/* Color 1: #e9590c (orange) - columns 1-4 */
+.cell:nth-child(27n+1):hover,
+.cell:nth-child(27n+2):hover,
+.cell:nth-child(27n+3):hover,
+.cell:nth-child(27n+4):hover {
+  background-color: #e9590c !important;
+  opacity: 1;
+}
+
+/* Color 2: #e42513 (red) - columns 5-9 */
+.cell:nth-child(27n+5):hover,
+.cell:nth-child(27n+6):hover,
+.cell:nth-child(27n+7):hover,
+.cell:nth-child(27n+8):hover,
+.cell:nth-child(27n+9):hover {
+  background-color: #e42513 !important;
+  opacity: 1;
+}
+
+/* Color 3: #d21f82 (pink) - columns 10-13 */
+.cell:nth-child(27n+10):hover,
+.cell:nth-child(27n+11):hover,
+.cell:nth-child(27n+12):hover,
+.cell:nth-child(27n+13):hover {
+  background-color: #d21f82 !important;
+  opacity: 1;
+}
+
+/* Color 4: #713389 (purple) - columns 14-18 */
+.cell:nth-child(27n+14):hover,
+.cell:nth-child(27n+15):hover,
+.cell:nth-child(27n+16):hover,
+.cell:nth-child(27n+17):hover,
+.cell:nth-child(27n+18):hover {
+  background-color: #713389 !important;
+  opacity: 1;
+}
+
+/* Color 5: #2569b1 (blue) - columns 19-22 */
+.cell:nth-child(27n+19):hover,
+.cell:nth-child(27n+20):hover,
+.cell:nth-child(27n+21):hover,
+.cell:nth-child(27n+22):hover {
+  background-color: #2569b1 !important;
+  opacity: 1;
+}
+
+/* Color 6: #32b3a7 (teal) - columns 23-27 */
+.cell:nth-child(27n+23):hover,
+.cell:nth-child(27n+24):hover,
+.cell:nth-child(27n+25):hover,
+.cell:nth-child(27n+26):hover,
+.cell:nth-child(27n):hover {
+  background-color: #32b3a7 !important;
+  opacity: 1;
+}
+
+/* Fix: Feature items hover colors for "Why Aureon?" section */
+.feature-item {
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Feature item 1 - Fast Turnaround (orange) */
+.feature-item[style*="#e9590c"]:hover {
+  background-color: #e9590c !important;
+  color: white;
+}
+
+/* Feature item 2 - One-stop Shop (blue) */
+.feature-item[style*="#2569b1"]:hover {
+  background-color: #2569b1 !important;
+  color: white;
+}
+
+/* Feature item 3 - Low Minimum (pink) */
+.feature-item[style*="#d21f82"]:hover {
+  background-color: #d21f82 !important;
+  color: white;
+}
+
+/* Feature item 4 - Expert Support (green) */
+.feature-item[style*="#1ca538"]:hover {
+  background-color: #1ca538 !important;
+  color: white;
+}
+
+/* Ensure text remains white on hover */
+.feature-item:hover .feature-title,
+.feature-item:hover .section-desc {
+  color: white;
+}
+
+.feature-item:hover .feature-icon-box i {
+  color: white;
+}
+
+/* ========================================= */
+/* Fix: QuickLinks business category cards  */
+/* ========================================= */
+
+.ql-card {
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.ql-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+/* Card 1 - General Printing (orange) */
+.ql-card[style*="#e9590c"]:hover {
+  background-color: #e9590c !important;
+}
+
+/* Card 2 - Marketing (red) */
+.ql-card[style*="#e42513"]:hover {
+  background-color: #e42513 !important;
+}
+
+/* Card 3 - Signs & Displays (pink/magenta) */
+.ql-card[style*="#d21f82"]:hover {
+  background-color: #d21f82 !important;
+}
+
+/* Card 4 - Packaging (purple) */
+.ql-card[style*="#713389"]:hover {
+  background-color: #713389 !important;
+}
+
+/* Card 5 - Stationery (blue) */
+.ql-card[style*="#2569b1"]:hover {
+  background-color: #2569b1 !important;
+}
+
+/* Card 6 - Finishing (green) */
+.ql-card[style*="#1ca538"]:hover {
+  background-color: #1ca538 !important;
+}
+
+/* Ensure all text/icons turn white on hover */
+.ql-card:hover .ql-title,
+.ql-card:hover .ql-desc,
+.ql-card:hover .ql-icon i {
+  color: white !important;
+}

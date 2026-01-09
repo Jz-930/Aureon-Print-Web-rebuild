@@ -1,9 +1,48 @@
 import React from 'react';
+import { BackgroundBeamsWithCollision } from './ui/background-beams-with-collision';
 
 export default function Features() {
   return (
     <>
-<section className="relative"><div className="from-white to-neutral-100 dark:from-neutral-950 dark:to-neutral-800 relative flex items-center w-full justify-center overflow-hidden h-auto min-h-[600px] py-48 bg-white"><div className="absolute left-0 top-20 m-auto h-14 w-px rounded-full bg-gradient-to-t from-indigo-500 via-purple-500 to-transparent" style={{transform: 'translateX(10px) translateY(-200px)'}}></div><div className="absolute left-0 top-20 m-auto h-14 w-px rounded-full bg-gradient-to-t from-indigo-500 via-purple-500 to-transparent" style={{transform: 'translateX(600px) translateY(-200px)'}}></div><div className="absolute left-0 top-20 m-auto w-px rounded-full bg-gradient-to-t from-indigo-500 via-purple-500 to-transparent h-6" style={{transform: 'translateX(100px) translateY(-200px)'}}></div><div className="absolute left-0 top-20 m-auto h-14 w-px rounded-full bg-gradient-to-t from-indigo-500 via-purple-500 to-transparent" style={{transform: 'translateX(400px) translateY(-200px)'}}></div><div className="absolute left-0 top-20 m-auto w-px rounded-full bg-gradient-to-t from-indigo-500 via-purple-500 to-transparent h-20" style={{transform: 'translateX(800px) translateY(-200px)'}}></div><div className="absolute left-0 top-20 m-auto w-px rounded-full bg-gradient-to-t from-indigo-500 via-purple-500 to-transparent h-12" style={{transform: 'translateX(1000px) translateY(-200px)'}}></div><div className="absolute left-0 top-20 m-auto w-px rounded-full bg-gradient-to-t from-indigo-500 via-purple-500 to-transparent h-6" style={{transform: 'translateX(1200px) translateY(-200px)'}}></div><div className="absolute left-0 top-20 m-auto w-px rounded-full bg-gradient-to-t from-indigo-500 via-purple-500 to-transparent h-8" style={{transform: 'translateX(200px) translateY(-200px)'}}></div><div className="absolute left-0 top-20 m-auto w-px rounded-full bg-gradient-to-t from-indigo-500 via-purple-500 to-transparent h-16" style={{transform: 'translateX(500px) translateY(-200px)'}}></div><div className="absolute left-0 top-20 m-auto w-px rounded-full bg-gradient-to-t from-indigo-500 via-purple-500 to-transparent h-10" style={{transform: 'translateX(900px) translateY(-200px)'}}></div><div className="absolute left-0 top-20 m-auto w-px rounded-full bg-gradient-to-t from-indigo-500 via-purple-500 to-transparent h-14" style={{transform: 'translateX(1100px) translateY(-200px)'}}></div><div className="container relative z-20"><div className="section-header"><h2 className="section-title">Why Aureon?</h2></div><div className="features-grid"><div className="feature-item bg-white/50 backdrop-blur-sm px-10 py-12 rounded-xl border border-gray-100 shadow-sm min-h-[320px] flex flex-col justify-center items-center transition-all duration-300" style={{HoverColor: '#e9590c'}}><div className="feature-icon-box"><i className="fa-solid fa-bolt"></i></div><h3 className="feature-title">Fast Turnaround<br />快速交付</h3><p className="section-desc" style={{fontSize: '0.9rem'}}><span className="lang-zh">标准订单 3-5 工作日,急单可咨询。</span><span className="lang-en">Standard 3-5 days. Rush orders welcome.</span></p></div><div className="feature-item bg-white/50 backdrop-blur-sm px-10 py-12 rounded-xl border border-gray-100 shadow-sm min-h-[320px] flex flex-col justify-center items-center transition-all duration-300" style={{HoverColor: '#2569b1'}}><div className="feature-icon-box"><i className="fa-solid fa-thumbs-up"></i></div><h3 className="feature-title">One-stop Shop<br />一站式印刷</h3><p className="section-desc" style={{fontSize: '0.9rem'}}><span className="lang-zh">从设计、印刷到后加工、安装全搞定。</span><span className="lang-en">Design, print, finish, install - we do it all.</span></p></div><div className="feature-item bg-white/50 backdrop-blur-sm px-10 py-12 rounded-xl border border-gray-100 shadow-sm min-h-[320px] flex flex-col justify-center items-center transition-all duration-300" style={{HoverColor: '#d21f82'}}><div className="feature-icon-box"><i className="fa-solid fa-percent"></i></div><h3 className="feature-title">Low Minimum<br />小量也划算</h3><p className="section-desc" style={{fontSize: '0.9rem'}}><span className="lang-zh">少量试印、个人项目都欢迎。</span><span className="lang-en">Small runs & personal projects are welcome.</span></p></div><div className="feature-item bg-white/50 backdrop-blur-sm px-10 py-12 rounded-xl border border-gray-100 shadow-sm min-h-[320px] flex flex-col justify-center items-center transition-all duration-300" style={{HoverColor: '#1ca538'}}><div className="feature-icon-box"><i className="fa-solid fa-user-gear"></i></div><h3 className="feature-title">Expert Support<br />专业支持</h3><p className="section-desc" style={{fontSize: '0.9rem'}}><span className="lang-zh">免费文件检查和专业工艺建议。</span><span className="lang-en">Free file check & professional advice.</span></p></div></div></div><div className="absolute bottom-0 bg-neutral-100 w-full inset-x-0 pointer-events-none"></div></div></section>
+      <section className="relative">
+        <BackgroundBeamsWithCollision className="h-auto min-h-[600px] py-48 bg-white">
+          <div className="container relative z-20">
+            <div className="section-header">
+              <h2 className="section-title">Why Aureon?</h2>
+            </div>
+            <div className="features-grid">
+              <div className="feature-item bg-white/50 backdrop-blur-sm px-10 py-12 rounded-xl border border-gray-100 shadow-sm min-h-[320px] flex flex-col justify-center items-center transition-all duration-300" style={{ '--hover-color': '#e9590c' } as React.CSSProperties}>
+                <div className="feature-icon-box">
+                  <i className="fa-solid fa-bolt"></i>
+                </div>
+                <h3 className="feature-title">Fast Turnaround<br />快速交付</h3>
+                <p className="section-desc" style={{ fontSize: '0.9rem' }}><span className="lang-zh">标准订单 3-5 工作日,急单可咨询。</span><span className="lang-en">Standard 3-5 days. Rush orders welcome.</span></p>
+              </div>
+              <div className="feature-item bg-white/50 backdrop-blur-sm px-10 py-12 rounded-xl border border-gray-100 shadow-sm min-h-[320px] flex flex-col justify-center items-center transition-all duration-300" style={{ '--hover-color': '#2569b1' } as React.CSSProperties}>
+                <div className="feature-icon-box">
+                  <i className="fa-solid fa-thumbs-up"></i>
+                </div>
+                <h3 className="feature-title">One-stop Shop<br />一站式印刷</h3>
+                <p className="section-desc" style={{ fontSize: '0.9rem' }}><span className="lang-zh">从设计、印刷到后加工、安装全搞定。</span><span className="lang-en">Design, print, finish, install - we do it all.</span></p>
+              </div>
+              <div className="feature-item bg-white/50 backdrop-blur-sm px-10 py-12 rounded-xl border border-gray-100 shadow-sm min-h-[320px] flex flex-col justify-center items-center transition-all duration-300" style={{ '--hover-color': '#d21f82' } as React.CSSProperties}>
+                <div className="feature-icon-box">
+                  <i className="fa-solid fa-percent"></i>
+                </div>
+                <h3 className="feature-title">Low Minimum<br />小量也划算</h3>
+                <p className="section-desc" style={{ fontSize: '0.9rem' }}><span className="lang-zh">少量试印、个人项目都欢迎。</span><span className="lang-en">Small runs & personal projects are welcome.</span></p>
+              </div>
+              <div className="feature-item bg-white/50 backdrop-blur-sm px-10 py-12 rounded-xl border border-gray-100 shadow-sm min-h-[320px] flex flex-col justify-center items-center transition-all duration-300" style={{ '--hover-color': '#1ca538' } as React.CSSProperties}>
+                <div className="feature-icon-box">
+                  <i className="fa-solid fa-user-gear"></i>
+                </div>
+                <h3 className="feature-title">Expert Support<br />专业支持</h3>
+                <p className="section-desc" style={{ fontSize: '0.9rem' }}><span className="lang-zh">免费文件检查和专业工艺建议。</span><span className="lang-en">Free file check & professional advice.</span></p>
+              </div>
+            </div>
+          </div>
+        </BackgroundBeamsWithCollision>
+      </section>
     </>
   );
 }
