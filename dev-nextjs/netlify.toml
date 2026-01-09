@@ -18,9 +18,11 @@
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
 
-# 可选：SPA 路由回退 (如果需要客户端路由)
+# 根路径重定向到默认语言
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  force = false
+  from = "/"
+  to = "/en"
+  status = 302
+
+# 处理刷新时的路由 - /en/* 和 /zh/* 已经有对应的静态文件
+# 不需要 SPA 回退
