@@ -274,6 +274,24 @@
     },
     "common": {
         "get_quote": "Get Quote",
-        "hot": "HOT"
+        "hot": "HOT",
+        "know_more": "Know More"
+    },
+    "service_pages": {
+        "marketing": {
+            "title": "General Printing & Marketing",
+            "desc": "High-quality offset and digital printing for all your business needs. From business cards to brochures, we help you make a lasting impression.",
+            "hero_title": "General Printing & Marketing"
+        },
+        "signs": {
+            "title": "Signs & Displays",
+            "desc": "Make a big impact with our large format printing solutions. Perfect for storefronts, events, and trade shows.",
+            "hero_title": "Signs & Displays"
+        },
+        "finishing": {
+            "title": "Packaging & Finishing",
+            "desc": "Elevate your product with custom packaging and premium finishing options like foil stamping and die-cutting.",
+            "hero_title": "Packaging & Finishing"
+        }
     }
 }

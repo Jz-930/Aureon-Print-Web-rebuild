@@ -22,7 +22,7 @@ export default async function Home(props: { params: Promise<{ lang: string }> })
       <QuickLinks dict={dict} lang={params.lang} />
       <Products dict={{ ...dict.products_section, items: dict.products_data, common: dict.common }} lang={params.lang} />
       <Features dict={{ ...dict.features_section, items: dict.features_data }} lang={params.lang} />
-      <Services dict={{ ...dict.services_section, categories: dict.services_categories, data: dict.services_data }} lang={params.lang} />
+      <Services dict={{ ...dict.services_section, categories: dict.services_categories, data: dict.services_data, common: dict.common }} lang={params.lang} />
       <Gallery dict={dict.gallery} lang={params.lang} />
       <QuoteForm dict={dict.quote_form} lang={params.lang} />
       <FAQ dict={dict.faq} lang={params.lang} />

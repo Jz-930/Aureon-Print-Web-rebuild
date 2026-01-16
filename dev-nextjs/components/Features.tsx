@@ -37,7 +37,7 @@ export default function Features({ dict, lang }: FeaturesProps) {
                 const m = meta[index] || meta[0];
                 return (
                   <CometCard key={index}>
-                    <div className="feature-item bg-white/50 backdrop-blur-sm px-10 py-12 rounded-xl border border-gray-100 shadow-sm min-h-[320px] flex flex-col justify-center items-center transition-all duration-300" style={{ '--hover-color': m.hoverColor } as React.CSSProperties}>
+                    <div className="feature-item bg-stone-100/90 backdrop-blur-sm px-10 py-12 rounded-xl border border-gray-100 shadow-sm min-h-[320px] flex flex-col justify-center items-center transition-all duration-300" style={{ '--hover-color': m.hoverColor } as React.CSSProperties}>
                       <div className="feature-icon-box">
                         <i className={m.icon}></i>
                       </div>
